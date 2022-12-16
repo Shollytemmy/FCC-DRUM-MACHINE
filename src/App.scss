@@ -1,0 +1,35 @@
+$main-color: #8d8d8d;
+$secondary-color: #b3b3b3;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $main-color;
+
+    .App {
+        border: 5px solid gold;
+        width: 660px;
+        min-height: 316px;
+        display: flex;
+        justify-content: space-between;
+        background-color: $secondary-color;
+
+        .drumPad{
+            width: 332px;
+            border: 0px solid;
+        }
+        .display{
+            width: 240px;
+            border: 0px solid red;
+        }
+      
+    }
+}
+
