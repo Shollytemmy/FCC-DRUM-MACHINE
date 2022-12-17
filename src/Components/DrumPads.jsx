@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const DrumPads = ({drumPads,  handleButtonClick}) => {
+export const DrumPads = ({drumPads,   handleButtonClick}) => {
   return (
     <div id='drumPad' className='drumPad'>
       {
@@ -9,10 +9,11 @@ export const DrumPads = ({drumPads,  handleButtonClick}) => {
             <button className='drum_key'
              id={drumPad.title}
               key={drumPad.key}
-              onClick={() => handleButtonClick(key, title)}
+              onClick={ handleButtonClick(drumPad.title, drumPad.key)}
               >
-              <audio src={drumPad.url}></audio>
-              {drumPad.key}</button>
+                {drumPad.key}
+              <audio src={drumPad.url} className="clip" id={drumPad.key} />
+              </button>
           )
         })
       }

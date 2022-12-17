@@ -41,11 +41,18 @@ body{
             gap: 5px;
             border: 0px solid green;
             
+            
 
             .drum_key{
                 width: 100px;
                 height: 80px;
                 align-self: center;
+                box-shadow: black 3px 3px 5px;
+                background-color: gray;
+                outline: none;
+                border: 0;
+                font-weight: 700;
+                    font-size: 18px;
             }
         }
         .display{
