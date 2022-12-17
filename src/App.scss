@@ -1,3 +1,5 @@
+$Mobile: 768px;
+
 $main-color: #8d8d8d;
 $secondary-color: #b3b3b3;
 
@@ -14,7 +16,7 @@ body{
     justify-content: center;
     align-items: center;
     border: 0px solid green;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     background-color: $main-color;
     font-family: 'Ruso one', sans-serif;
@@ -53,11 +55,18 @@ body{
                 border: 0;
                 font-weight: 700;
                     font-size: 18px;
+                    &:active {
+                        cursor: pointer;
+                        background-color: gold;
+                        transform: translateY(5px);
+
+                    }
+
             }
         }
         .display{
-            width: 240px;
-            border: 0px solid red;
+            width: 300px;
+            min-height: 272px;
 
             .display__text{
                 width: 200px;
@@ -71,7 +80,6 @@ body{
 
             .input__controls{
                 width: 200px;
-                border: 0px solid red;
                 margin: 15px auto;
                 input[type="range"]{
                     width: 100%;
@@ -81,5 +89,25 @@ body{
 
       
     }
+}
+
+@media (max-width: $Mobile) {
+    
+        .drum-machine {
+            
+                
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                   
+                    
+                
+            
+
+    }
+    
+
 }
 
