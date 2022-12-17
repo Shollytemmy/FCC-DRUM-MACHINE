@@ -62,6 +62,7 @@ const [currentSong, updateCurrent] = useState("")
 const handleButtonClick = (title, key) =>{
   return() =>{
     document.getElementById(key).play();
+    
 
     updateCurrent(title);
    
@@ -80,6 +81,7 @@ const handleKeypress = (e) =>{
 useEffect(() => {
   
   window.addEventListener('keypress', handleKeypress)
+  
 
   return () => {
     window.removeEventListener('keypress', handleKeypress)
