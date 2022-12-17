@@ -1,12 +1,18 @@
 import React from 'react'
 
-export const DrumPads = ({drumPads}) => {
+export const DrumPads = ({drumPads,  handleButtonClick}) => {
   return (
     <div id='drumPad' className='drumPad'>
       {
         drumPads.map((drumPad, index) =>{
           return(
-            <button className='drum_key' id='drum_key'>{drumPad.key}</button>
+            <button className='drum_key'
+             id={drumPad.title}
+              key={drumPad.key}
+              onClick={() => handleButtonClick(key, title)}
+              >
+              <audio src={drumPad.url}></audio>
+              {drumPad.key}</button>
           )
         })
       }

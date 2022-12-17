@@ -56,11 +56,40 @@ function App() {
 
 ])
 
+const [currentSong, updateCurrent] = useState("Unknown")
+
+
+const handleButtonClick = (title, key) =>{
+  return() =>{
+    document.getElementById(key).onplay();
+    updateCurrent(title)
+  }
+}
+const handleKeypress = (e) =>{
+
+  const drumKey = drumPads.find((pad) => pad.key === e.key)
+
+  if(drumKey){
+    document.getElementById(drumKey.title).click();
+  }
+}
+
+React.useEffect(() => {
+  
+})
+
   return (
     <div className="drum-machine" id='drum-machine'>
       
-      <DrumPads drumPads ={drumPads} />
-      <Display />
+      <DrumPads
+       drumPads ={drumPads}
+       handleButtonClick = {handleButtonClick}
+       />
+      <Display 
+      currentSong ={currentSong}
+       updateCurrent = {updateCurrent}
+       
+        />
     </div>
   )
 }
