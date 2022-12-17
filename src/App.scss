@@ -58,6 +58,16 @@ body{
         .display{
             width: 240px;
             border: 0px solid red;
+
+            .display__text{
+                width: 200px;
+                    background-color: gray;
+                    margin: 15px auto;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    text-align: center;
+
+            }
         }
 
       
