@@ -4,6 +4,11 @@ $secondary-color: #b3b3b3;
 
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
+:root, button{
+    margin: 0;
+        padding: 0;
+
+}
 body{
     display: flex;
     justify-content: center;
@@ -12,23 +17,42 @@ body{
     height: 100vh;
     overflow: hidden;
     background-color: $main-color;
+    font-family: 'Ruso one', sans-serif;
+    
 
-    .App {
+    .drum-machine{
         border: 5px solid gold;
         width: 660px;
         min-height: 316px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background-color: $secondary-color;
 
         .drumPad{
-            width: 332px;
+            max-width: 332px;
+            height: 272px;
             border: 0px solid;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 5px 0px 0px;
+            gap: 5px;
+            border: 0px solid green;
+            
+
+            .drum_key{
+                width: 100px;
+                height: 80px;
+                align-self: center;
+            }
         }
         .display{
             width: 240px;
             border: 0px solid red;
         }
+
       
     }
 }
